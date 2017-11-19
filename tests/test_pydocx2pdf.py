@@ -14,10 +14,14 @@ class TestPydocx2pdf(unittest.TestCase):
 
     def setUp(self):
         self.cwd = os.getcwd()
+        self.PATH_TO_DOCX_FILE = os.path.join(self.cwd, "tests", "test.docx")
+        self.PATH_TO_OUTPUT_FOLDER = os.path.join(self.cwd, "tests")
+        self.PATH_TO_OUTPUT_PDF_FILE = os.path.join(self.cwd, "tests", "test.pdf")
 
     def tearDown(self):
-        os.remove(os.path.join(self.cwd, "tests", "test.pdf"))
+        os.remove(self.PATH_TO_OUTPUT_PDF_FILE)
+        pass
 
     def test_pdf_is_created(self):
-        pydocx2pdf.convert_to(os.path.join(self.cwd, "tests"), os.path.join(self.cwd, "tests", "test.pdf"))
-        self.assertTrue(os.path.exists("./test.pdf"))
+        pydocx2pdf.convert_to(self.PATH_TO_OUTPUT_FOLDER, self.PATH_TO_DOCX_FILE)
+        self.assertTrue(os.path.join(self.PATH_TO_OUTPUT_PDF_FILE))
