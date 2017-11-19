@@ -5,7 +5,7 @@
 
 
 import unittest
-
+import os
 from pydocx2pdf import pydocx2pdf
 
 
@@ -13,10 +13,11 @@ class TestPydocx2pdf(unittest.TestCase):
     """Tests for `pydocx2pdf` package."""
 
     def setUp(self):
-        """Set up test fixtures, if any."""
+        self.cwd = os.getcwd()
 
     def tearDown(self):
-        """Tear down test fixtures, if any."""
+        os.remove(os.path.join(self.cwd, "tests", "test.pdf"))
 
-    def test_000_something(self):
-        """Test something."""
+    def test_pdf_is_created(self):
+        pydocx2pdf.convert_to(os.path.join(self.cwd, "tests"), os.path.join(self.cwd, "tests", "test.pdf"))
+        self.assertTrue(os.path.exists("./test.pdf"))
