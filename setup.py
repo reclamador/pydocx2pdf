@@ -30,7 +30,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author="Jorge Arevalo",
     author_email='jorge.arevalo@reclamador.es',
-    url='https://github.com/jorgeas80/pydocx2pdf',
+    url='https://github.com/reclamador/pydocx2pdf',
     packages=find_packages(include=['pydocx2pdf']),
     include_package_data=True,
     install_requires=requirements,
