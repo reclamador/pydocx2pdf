@@ -29,7 +29,3 @@ def libreoffice_exec():
 class LibreOfficeError(Exception):
     def __init__(self, output):
         self.output = output
-
-
-if __name__ == '__main__':
-    print('Converted to ' + convert_to(sys.argv[1], sys.argv[2]))

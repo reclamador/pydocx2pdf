@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for PyDocx2PDF."""
+"""Top-level package for pydocx2pdf."""
 
 __author__ = """Jorge Arevalo"""
 __email__ = 'jorge.arevalo@reclamador.es'

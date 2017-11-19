@@ -12,7 +12,6 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'Click>=6.0',
     # TODO: put package requirements here
 ]
 
@@ -33,11 +32,6 @@ setup(
     author_email='jorge.arevalo@reclamador.es',
     url='https://github.com/jorgeas80/pydocx2pdf',
     packages=find_packages(include=['pydocx2pdf']),
-    entry_points={
-        'console_scripts': [
-            'pydocx2pdf=pydocx2pdf.cli:main'
-        ]
-    },
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",

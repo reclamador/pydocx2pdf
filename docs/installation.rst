@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install PyDocx2PDF, run this command in your terminal:
+To install pydocx2pdf, run this command in your terminal:
 
 .. code-block:: console
 
     $ pip install pydocx2pdf
 
-This is the preferred method to install PyDocx2PDF, as it will always install the most recent stable release. 
+This is the preferred method to install pydocx2pdf, as it will always install the most recent stable release. 
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -26,7 +26,7 @@ you through the process.
 From sources
 ------------
 
-The sources for PyDocx2PDF can be downloaded from the `Github repo`_.
+The sources for pydocx2pdf can be downloaded from the `Github repo`_.
 
 You can either clone the public repository:
 

@@ -1,4 +1,4 @@
-Welcome to PyDocx2PDF's documentation!
+Welcome to pydocx2pdf's documentation!
 ======================================
 
 Contents:

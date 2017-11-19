@@ -1,4 +1,4 @@
-* PyDocx2PDF version:
+* pydocx2pdf version:
 * Python version:
 * Operating System:
 

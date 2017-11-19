@@ -5,10 +5,8 @@
 
 
 import unittest
-from click.testing import CliRunner
 
 from pydocx2pdf import pydocx2pdf
-from pydocx2pdf import cli
 
 
 class TestPydocx2pdf(unittest.TestCase):
@@ -22,13 +20,3 @@ class TestPydocx2pdf(unittest.TestCase):
 
     def test_000_something(self):
         """Test something."""
-
-    def test_command_line_interface(self):
-        """Test the CLI."""
-        runner = CliRunner()
-        result = runner.invoke(cli.main)
-        assert result.exit_code == 0
-        assert 'pydocx2pdf.cli.main' in result.output
-        help_result = runner.invoke(cli.main, ['--help'])
-        assert help_result.exit_code == 0
-        assert '--help  Show this message and exit.' in help_result.output

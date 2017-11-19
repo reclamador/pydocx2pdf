@@ -1,5 +1,5 @@
 ==========
-PyDocx2PDF
+pydocx2pdf
 ==========
 
 

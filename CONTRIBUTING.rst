@@ -38,8 +38,8 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-PyDocx2PDF could always use more documentation, whether as part of the
-official PyDocx2PDF docs, in docstrings, or even on the web in blog posts,
+pydocx2pdf could always use more documentation, whether as part of the
+official pydocx2pdf docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback

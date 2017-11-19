@@ -55,7 +55,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'PyDocx2PDF'
+project = u'pydocx2pdf'
 copyright = u"2017, Jorge Arevalo"
 
 # The version info for the project you're documenting, acts as replacement
@@ -209,7 +209,7 @@ latex_elements = {
 # [howto/manual]).
 latex_documents = [
     ('index', 'pydocx2pdf.tex',
-     u'PyDocx2PDF Documentation',
+     u'pydocx2pdf Documentation',
      u'Jorge Arevalo', 'manual'),
 ]
 
@@ -240,7 +240,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'pydocx2pdf',
-     u'PyDocx2PDF Documentation',
+     u'pydocx2pdf Documentation',
      [u'Jorge Arevalo'], 1)
 ]
 
@@ -255,7 +255,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     ('index', 'pydocx2pdf',
-     u'PyDocx2PDF Documentation',
+     u'pydocx2pdf Documentation',
      u'Jorge Arevalo',
      'pydocx2pdf',
      'One line description of project.',
