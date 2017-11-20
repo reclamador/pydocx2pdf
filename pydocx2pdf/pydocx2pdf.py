@@ -2,21 +2,14 @@
 """
 Credits to https://michalzalecki.com/converting-docx-to-pdf-using-python/
 """
-import sys
-import subprocess
+import os
 import re
+import sys
 
-
-def convert_to(folder, source, timeout=None):
-    args = [libreoffice_exec(), '--headless', '--convert-to', 'pdf', '--outdir', folder, source]
-
-    process = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=timeout)
-    filename = re.search('-> (.*?) using filter', process.stdout.decode())
-
-    if filename is None:
-        raise LibreOfficeError(process.stdout.decode())
-    else:
-        return filename.group(1)
+if os.name == 'posix' and sys.version_info[0] < 3:
+    import subprocess32 as subprocess
+else:
+    import subprocess
 
 
 def libreoffice_exec():
@@ -29,3 +22,22 @@ def libreoffice_exec():
 class LibreOfficeError(Exception):
     def __init__(self, output):
         self.output = output
+
+
+def convert_to(folder, source, timeout=None):
+    args = [libreoffice_exec(), '--headless', '--convert-to', 'pdf',
+            '--outdir', folder, source]
+
+    try:
+        process = subprocess.run(args, stdout=subprocess.PIPE,
+                                 stderr=subprocess.PIPE, timeout=timeout)
+    except subprocess.TimeoutExpired as e:
+        raise LibreOfficeError("Could not transform {} to PDF: {}".format(
+            source, e))
+    else:
+        filename = re.search('-> (.*?) using filter', process.stdout.decode())
+
+        if filename is None:
+            raise LibreOfficeError(process.stderr.decode())
+        else:
+            return filename.group(1)
